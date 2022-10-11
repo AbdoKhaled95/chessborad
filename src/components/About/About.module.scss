@@ -1,0 +1,97 @@
+
+#about{
+    height: 100vh;
+    background-image: linear-gradient(rgba(38, 58, 65, 1), rgba(8, 12, 13, 1));
+    display: flex;
+    flex-wrap: wrap;
+    .aboutIcon{
+        padding-top: 20% ;
+        color: white;
+        width: 5%;
+    }
+    .aboutUs{
+        padding: 15% 2% 0 2%;
+        width: 45%;
+
+
+        .aboutUsTitle{
+            font-size: 60px;
+            color: rgba(160, 191, 27, 1);
+
+
+        }
+        .aboutUsDec{
+            font-size: 20px;
+            color: rgba(187, 187, 187, 1);
+
+        }
+    }
+    .aboutUsImg{
+        width: 35%;
+        height:575px;
+         padding: 12% 3% 0 3%;
+        img {
+            width: 100%;
+            height:100%;
+            border-radius: 20px;
+
+
+            
+           
+    
+    
+        }
+
+    }
+    
+
+    @media (max-width: 1200px) {
+        height: auto;
+        // padding-bottom: 50px;
+        flex-wrap: wrap;
+        .aboutIcon{
+            padding: 20% 0 0 0;
+           
+    
+        }
+
+        .aboutUs{
+            padding: 0 2% !important;
+            text-align: center;
+            width: 100%;
+        }
+        .aboutUsImg{
+            width: 450px;
+            height:450px;
+            margin: auto;
+            padding: 5% 0 ;
+    
+        }
+    }
+
+    @media (max-width: 768px) {
+
+        .aboutUsTitle{
+            font-size: 48px !important;
+
+        }
+        .aboutUsDec{
+            font-size: 16px !important;
+        }
+
+    }
+    @media (max-width: 576) {
+
+        .aboutUsTitle{
+            font-size: 32px !important;
+
+        }
+        .aboutUsDec{
+            font-size: 12px !important;
+        }
+
+
+    }
+
+
+}

@@ -1,0 +1,98 @@
+#secondIntro{
+    background-image: linear-gradient(rgba(38, 58, 65, 1)100%, rgba(8, 12, 13, 1)100%);
+    // background-color: red;
+    
+    .componentStart{
+        color: white;
+        z-index: 4;
+        
+    }
+    .goalGrid{
+        display: flex;
+        justify-content: space-around ;
+        align-items:center;
+        flex-wrap: nowrap;
+        .goalItem{
+            padding: 0 5%;
+            width: 65%;
+            .goalTitle{
+                color: rgba(160, 191, 27, 1);
+                // font-size: 52px;
+                font-size: 60px;
+                line-height: 10px ;
+
+
+
+            }
+            .goalDec{
+                font-size: 24px;
+                font-size: 20px ;
+
+
+                color: rgba(187, 187, 187, 1);
+            }
+
+        }
+        img.introImg{
+            padding: 0 2%;
+            width: 40% ;
+            height: 600px;
+          
+            
+           
+        }
+        @media (max-width: 1630px) {
+            .goalTitle{
+                font-size: 48px !important;
+            }
+        }
+        @media (max-width: 1305px) {
+            .goalTitle{
+                font-size: 36px !important;
+            }
+            .goalDec{
+                font-size: 20px !important;
+            }
+
+        }  
+        @media (max-width:992px) {
+            .goalTitle{
+                font-size: 26px !important;
+            }
+            .goalDec{
+                font-size: 14px !important;
+                padding-top: 0 !important;
+            }
+        }  
+        @media (max-width:768px) {
+            flex-wrap: wrap;
+            text-align: center;
+            .goalItem{
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                
+                .goalDec{
+                    font-size: 14px ;
+                }
+
+            }
+            img.introImg{
+                overflow: hidden;
+                width: 100%;
+                
+               
+            }
+        }
+        @media (max-width: 576px){
+            .goalTitle{
+                font-size: 18px !important;
+            }
+            .goalDec{
+                font-size: 12px !important;
+                padding-top: 0 !important;
+            }
+
+        }  
+    }// end goalGrid
+} // end secondIntro

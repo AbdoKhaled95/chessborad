@@ -1,0 +1,135 @@
+
+#ourTeam{
+    // height: 100vh;
+    position: relative;
+    display: flex;
+    padding: 11% 0 2% 0;
+    &::before{
+        content: "";
+        height: 256px;
+        width: 65px;
+        background: rgba(48, 72, 81, 1); 
+        position: absolute;
+        left: 0;
+        top: 50%;
+        margin-top: -125px;
+        border-radius: 0 25px 25px 0;
+    }
+    .ourTeamItems{
+        width: 80%;
+        margin: auto;
+
+    }
+    .title{
+        font-size: 60px;
+        color: rgba(48, 72, 81, 1);
+    }
+    
+    .details{
+        font-size: 20px;
+        color: rgba(164, 164, 164, 1);
+    }
+    .members{
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        flex-wrap: nowrap;
+        .member{
+            margin-top: 25px;
+            .memberIcon{
+                color: rgba(38, 58, 65, 1);
+                border-radius: 50%;
+                padding: 50px;
+                background-color:rgba(160, 191, 27, 1);
+            }
+            p.memberName {
+                line-height: 90%;
+                color: rgba(48, 72, 81, 1);
+                font-size: 20px;
+            }
+            small.memberJob {
+                color: rgba(164, 164, 164, 1);
+                font-size: 17px;
+                
+            }
+
+        }
+    }
+////////////////////////////////////////////////////
+    @media (max-width: 1200px) {
+        &::before{
+            width: 40px;
+        }
+        .ourTeamItems{  
+            width: 75%;
+           
+    
+        }
+        .member{
+            p.memberName {
+                
+                font-size: 16px !important;
+            }
+            small.memberJob {
+                font-size: 12px !important;
+                
+            }
+        
+        }
+
+    }
+
+    @media (min-width:768px) and (max-width: 1200px) {
+        .members{
+            flex-wrap: wrap;
+            .member{
+                width: 30%;
+            
+            }
+        }
+    }
+    @media (max-width: 767px) {
+        .ourTeamItems{  
+            padding-top: 8%;
+            text-align: center;
+            .title{
+                font-size: 48px;
+            }
+            .details{
+                font-size: 12px;
+            }
+    
+        }
+
+        .members{
+            flex-wrap: wrap;
+            justify-content: center;
+            .member{
+                width: 45% !important;
+                padding:  2%;
+            
+            }
+         }
+        }
+    
+    @media (min-width: 768px) and (max-width: 992px) {
+        .ourTeamItems{  
+            .title{
+                font-size: 52px;
+            }
+            .details{
+                font-size: 16px;
+            }
+    
+        }
+        
+
+
+
+    }
+
+
+
+
+
+}

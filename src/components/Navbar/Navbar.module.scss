@@ -1,0 +1,245 @@
+@import "/src/index.scss";
+
+
+
+#navbar{
+    font-weight: 600;
+    font-size: 20px;
+    color: $secondColor;
+    background-color: $thirdColor ;
+    height: 90px;
+    border-radius:25px;
+    width: 80%;
+    position: fixed;
+    top: 50px;
+    margin: 0 auto; /* Will not center vertically and won't work in IE6/7. */
+    left: 0;
+    right: 0;
+    padding: 0 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 10px 24px #0000001F;
+    z-index: 20;
+    
+
+    .logo{
+       width: 35%;
+        .logoImg{
+            width: 50px;
+        }
+    }
+    .navAreaLinks{
+        width: 65%;
+        .links{
+            ///// all Link in navbar
+            text-decoration: none;
+            color: $secondColor;
+
+        }
+
+        .navLinks{
+            background-color: $thirdColor ;
+
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .navLink{
+                position: relative;
+                cursor:  pointer;
+                
+               
+                .links{
+                    transition: all 0.3s ease-in-out ;
+
+                    &:hover{
+                        color: $mainColor;
+                    }
+                    
+                }
+                &::after{
+                    content: "";
+                    transition: all 0.3s ease-in-out ;
+                    height: 2px;
+                    width:calc(100%);
+                    position:absolute;
+                    bottom: -10px; 
+                    left: 0; 
+                }
+                &:hover::after{
+                    background-color: $fourthColor;
+                    
+                }
+                &::before{
+                    content: "";
+                    transition: all 0.3s ease-in-out;
+                    height: 10px;
+                    width: 12px;
+                    position: absolute;
+                    bottom: -14px;  
+                }
+                &:hover::before{
+                    background-color: $fourthColor;
+                    color: $mainColor;
+                }
+            }
+            .langBtn{
+                background-color: $mainColor;
+                color: $thirdColor;
+                border-radius: 5px;
+                padding: 5px;
+                cursor:  pointer;
+                button{
+                    background-color: transparent;
+                    border: none;
+                    color: white;
+                }
+
+            }
+            .navListLinksHover{
+                display: none;
+                align-items: center;
+                flex-direction: column;
+                justify-content: space-between;
+                position: absolute;
+                width: 150px;
+                top: 60px;
+                list-style: none;
+                border-radius: 15px;
+                box-shadow: 0 10px 24px #0000001F;
+                padding: 10px;
+                font-size: 14px;
+                height: 100px;
+                z-index: 99;
+                background-color: $thirdColor;
+                .navLinkHover{
+                    transition: all .4s ;
+                   
+                    &:hover {
+                        transform: scale(.9);
+                    }
+                    .links{
+                        &:hover {
+                            color: $fourthColor;
+                        }
+                    }
+                }
+            }
+            .activeDropBox{
+                display: flex;
+            }
+
+
+        }
+    } 
+
+    #mobile{
+        display: none;
+
+        i{
+            font-size: 24px;
+            cursor: pointer;
+            color: $secondColor;
+            transition: all .3s;
+            &:hover{
+                color: $mainColor;
+            }
+        }
+
+    }
+
+    ////////////////////////////////////////////////////////////////
+    @media (min-width: 769px) and (max-width: 1400px) {
+
+        .logo{
+            width: 20%;
+        }
+        .navAreaLinks{
+            width: 80%;
+               
+        }
+    }
+    @media (min-width: 801px) and (max-width: 1200px){    
+    
+        .navLink{
+            font-size: 16px;
+            
+        }
+    }           
+    @media (max-width: 800px){    
+    
+        .navLinks{
+            flex-direction: column;
+            justify-content: flex-start !important; 
+            align-items: flex-start !important;
+            width: 65% !important;
+            height: 300px;
+            position: fixed;
+            right: 0;
+            top: -400px ;
+            padding: 30px 40px ;
+            box-shadow: 0 10px 24px #0000001F;
+            opacity: 0;
+            transition: all 0.5s ease-in-out;
+        }
+       .navLink {
+            margin: 15px 0;
+            position: static !important;
+            font-size: 16px;
+
+            &::after{
+                height: 0px !important;
+                width:0 !important;
+                bottom: 0 !important; 
+                left: 0 !important; 
+            }
+            &:hover::after{
+                background-color: transparent !important;
+                
+            }
+            &::before{
+                height:0 !important;
+                width: 0 !important;
+                position: absolute;
+                bottom: 0 !important;  
+            }
+            &:hover::before{
+                background-color: transparent !important;
+                color: transparent !important;
+            }
+            
+        }
+        .navListLinksHover{
+            display: none;
+            align-items: center;
+            flex-direction: column;
+            justify-content: space-between;
+            position:absolute !important;
+            width: 100px;
+            left: 140px!important;
+            right: 140px !important;
+            top:35%!important;
+            list-style: none;
+            border-radius: 15px;
+            box-shadow: 0 10px 24px #0000001F;
+            padding: 10px;
+            font-size: 12px ;
+            height: 100px;
+            z-index: 99;
+            background-color: $thirdColor;
+           
+        }
+        
+        #mobile{
+            display: block;
+        }
+        .active{
+            top:  124px;
+            opacity: 1;
+        }
+    }
+}
+
+
+

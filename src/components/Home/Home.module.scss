@@ -1,0 +1,15 @@
+
+#home{
+    overflow: auto;
+    #introVideo{
+        height: 100vh;
+        width: 100%;
+        object-fit:fill;
+        position: absolute;
+        z-index: 3;
+        @media (max-width: 576px) {
+            object-fit:cover;
+        }  
+    } // end  #introVideo
+   
+}// end home

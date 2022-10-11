@@ -1,0 +1,81 @@
+#fristIntro{
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin: 12px auto 10px  auto ;
+    height: 96vh;
+    width: 98%;
+    background-color: rgba(255, 255, 255, .65);
+    z-index: 3;
+    
+    
+    h2{
+        font-size: 60px;
+        color: rgba(102, 121, 127, 1);
+
+        span{
+            color: rgba(48, 72, 81, 1);
+            
+        }
+            
+    }
+    .left {
+            position: absolute;
+            width: 50px;
+            height: 80px;
+            left: 2px;
+            background-color:rgba(189, 226, 30, 1);
+            
+    }
+    .right{
+        position: absolute;
+        width: 50px;
+        height: 80px;
+        right: 2px;
+        background-color: rgba(189, 226, 30, 1);
+    }
+
+    p{
+        position: absolute;
+        bottom: 2%;
+        color: rgba(102, 121, 127, 1);
+        width: 50%;
+        font-size: 20px;
+        font-weight: 800;
+    }
+    @media (max-width: 992px) {
+        h2{
+            font-size: 42px;
+        }
+    }
+    @media (max-width: 768px) {
+        h2{
+            font-size: 30px;
+        }
+        p{
+            font-size: 14px
+        }
+
+    }
+    @media (max-width: 576px) {
+        h2{
+            font-size: 24px;
+        }
+        p{
+            font-size: 12px
+        }
+
+    }
+    @media (max-width: 500px) {
+        h2{
+            font-size: 18px;
+        }
+        p{
+            font-size: 10px;
+        }
+
+    }
+    
+} /// end fristIntro

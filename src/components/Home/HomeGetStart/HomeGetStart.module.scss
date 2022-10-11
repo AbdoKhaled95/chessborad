@@ -1,0 +1,76 @@
+@import "/src/index.scss";
+#homeGetStart{
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    background-color: brown;
+    // background-image: url(./backgroundImage.jpg);
+    background-size: cover;
+    .homeGetStartIcon{
+        padding: 65px 25px;
+        color: $fourthColor;
+        font-size: 22px;
+    }
+    .homeGetStartGrid{
+        width: 50%;
+        .GetStartTilte{
+            font-size: 60px;
+        }
+        .GetStartDec{
+            font-size: 20px;
+            color:rgba(235, 235, 235, 1);
+        }
+        .GetStartBtn{
+            cursor: pointer;
+            font-size: 22px;
+            padding: 25px 100px;
+            background-color: $fourthColor;
+            border-radius: 15px;
+            border:  1px solid transparent;
+            margin: 25px;
+            transition: all .3s;
+            color: white;
+            text-decoration: none;
+            &:hover{
+                background-color: rgba(130, 157, 17, 1);
+            }
+        }
+    }
+    @media (min-width: 993px) and (max-width: 1400px) {
+        .GetStartTilte{
+            font-size: 38px !important;
+        }
+        .GetStartDec{
+            font-size: 16px !important;
+        }
+    }
+    @media (max-width: 992px) {
+        justify-content: center;
+        // align-items: center;
+       
+        .homeGetStartGrid{
+            padding: 10px !important;
+            width: 70%;
+            .GetStartTilte{
+                font-size: 32px;
+            }
+            .GetStartDec{
+                font-size: 16px;
+                color:rgba(235, 235, 235, 1);
+            }
+            .GetStartBtn{
+                font-size: 14px;
+                padding: 25px 50px;
+                margin: 10px;
+            }
+        }
+    }
+    @media (max-width: 576px) {
+      
+        .GetStartTilte{
+            font-size: 20px !important;
+        }
+    }
+
+}// end homeGetStart

@@ -1,0 +1,35 @@
+#footer{
+    background-image: linear-gradient(rgba(38, 58, 65, 1), rgba(8, 12, 13, 1));
+    padding: 0 10%;
+    height: 342px;
+    color: rgba(187, 187, 187, 1);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    .footerItems{
+        display: flex;
+        justify-content:space-between;
+        flex-wrap: wrap;
+
+        .footerItem{
+            .coleredItem{
+                color: rgba(160, 191, 27, 1);
+            }
+            .coleredItem2{
+                color: rgba(187, 187, 187, 1);
+            }
+        }
+       
+    }
+
+    @media (max-width: 992px){
+        align-items: flex-start !important;
+        font-size: 12px;
+        padding: 0 5%;
+        .footerItems{
+            display: block !important;
+            
+        }
+    }
+   
+}
